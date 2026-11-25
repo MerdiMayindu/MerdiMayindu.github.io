@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merdi Mayindu | Data & Marketing Analyst</title>
+<meta name="description" content="Portfolio of Merdi Mayindu, a Dublin-based data and marketing analyst. SQL, Power BI, Tableau, Excel and GA4 projects in marketing, customer and product analytics.">
+<meta property="og:title" content="Merdi Mayindu | Data & Marketing Analyst">
+<meta property="og:description" content="SQL, Power BI, Tableau and GA4 projects in marketing, customer and product analytics.">
+<meta property="og:image" content="images/project-facebook-ads.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --ink: #14181f;
+    --muted: #5b6470;
+    --line: #e4e1d8;
+    --accent: #0f6e66;
+    --accent-soft: #e2f0ee;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(20,24,31,.05), 0 8px 24px rgba(20,24,31,.06);
+    --max: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav.top {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(247,246,242,.88); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+  .brand { font-weight: 800; text-decoration: none; letter-spacing: -.01em; }
+  .brand span { color: var(--accent); }
+  .nav-links { display: flex; gap: 22px; font-size: 14px; font-weight: 500; }
+  .nav-links a { text-decoration: none; color: var(--muted); }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* Hero */
+  header.hero { padding: 88px 0 64px; }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 4px 12px; border-radius: 99px; margin-bottom: 20px; }
+  h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.05; letter-spacing: -.03em; margin: 0 0 16px; font-weight: 800; }
+  .role { font-size: clamp(18px, 2.4vw, 22px); font-weight: 600; color: var(--muted); margin: 0 0 22px; }
+  .intro { max-width: 680px; font-size: 17px; color: #333b46; margin: 0 0 30px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; border: 1px solid var(--line); background: var(--surface); transition: transform .15s, box-shadow .15s; }
+  .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+  .btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+  .chip { font-size: 13px; font-weight: 500; padding: 5px 12px; border-radius: 99px; background: var(--surface); border: 1px solid var(--line); color: #333b46; }
+
+  /* Sections */
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .sec-head { margin-bottom: 36px; max-width: 720px; }
+  .sec-head h2 { font-size: clamp(28px, 4vw, 36px); letter-spacing: -.02em; margin: 0 0 10px; line-height: 1.15; }
+  .sec-head p { color: var(--muted); margin: 0; font-size: 17px; }
+
+  /* Project cards */
+  .projects { display: grid; gap: 28px; }
+  .project {
+    display: grid; grid-template-columns: 1.15fr 1fr; gap: 0;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--shadow);
+  }
+  .project .shot { background: #eef0f3; border-right: 1px solid var(--line); cursor: zoom-in; display: flex; align-items: center; padding: 14px; }
+  .project .shot img { width: 100%; height: auto; border-radius: 6px; box-shadow: 0 1px 3px rgba(20,24,31,.12); }
+  .project .body { padding: 28px 30px; display: flex; flex-direction: column; }
+  .tag { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .project h3 { margin: 0 0 10px; font-size: 22px; letter-spacing: -.01em; line-height: 1.25; }
+  .project p { margin: 0 0 14px; color: #3a424d; font-size: 15px; }
+  .finding { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 12px 14px; border-radius: 8px; font-size: 15px; margin: 4px 0 18px; }
+  .finding strong { color: var(--accent); }
+  .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+  .tools span { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 6px; background: #f1f2f4; color: #3a424d; }
+  .project .links { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+  .project .links .btn { font-size: 14px; padding: 9px 16px; }
+  .missing { width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; }
+
+  /* Experience block */
+  .exp-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); margin-bottom: 28px; }
+  .exp-card h3 { margin: 0 0 4px; font-size: 22px; }
+  .exp-meta { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0 6px; }
+  .stat { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .stat b { display: block; font-size: 28px; letter-spacing: -.02em; color: var(--accent); line-height: 1.1; }
+  .stat span { font-size: 13px; color: var(--muted); }
+  .sub { font-size: 19px; margin: 40px 0 6px; letter-spacing: -.01em; }
+  .sub-p { color: var(--muted); margin: 0 0 18px; max-width: 760px; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+  figure img { width: 100%; cursor: zoom-in; }
+  figcaption { font-size: 13.5px; color: #3a424d; padding: 12px 14px; border-top: 1px solid var(--line); }
+  figcaption b { color: var(--ink); }
+  .label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 5px; margin-right: 6px; }
+  .label.before { background: #f1f2f4; color: var(--muted); }
+  .label.after { background: var(--accent-soft); color: var(--accent); }
+  .trio { display: grid; grid-template-columns: 1.3fr 1fr .7fr; gap: 18px; align-items: start; }
+
+  /* Gallery */
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .gallery figure img { aspect-ratio: 16/10; object-fit: cover; object-position: top left; }
+
+  /* Contact */
+  .contact { text-align: center; padding: 88px 0; }
+  .contact h2 { font-size: clamp(28px, 4vw, 38px); margin: 0 0 12px; letter-spacing: -.02em; }
+  .contact p { color: var(--muted); margin: 0 auto 28px; max-width: 520px; }
+  .contact .btns { justify-content: center; }
+  footer { text-align: center; font-size: 13px; color: var(--muted); padding: 28px 0 40px; border-top: 1px solid var(--line); }
+
+  /* Lightbox */
+  .lightbox { position: fixed; inset: 0; background: rgba(10,12,16,.88); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 50; cursor: zoom-out; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-height: 92vh; max-width: 96vw; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+
+  @media (max-width: 860px) {
+    .project { grid-template-columns: 1fr; }
+    .project .shot { border-right: 0; border-bottom: 1px solid var(--line); }
+    .compare, .gallery, .trio { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    header.hero { padding: 56px 0 44px; }
+    section { padding: 56px 0; }
+    .wrap { padding: 0 16px; }
+    .project .body { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Merdi <span>Mayindu</span></a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#earlier">Earlier work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Dublin, Ireland · Open to analyst roles</span>
+    <h1>Merdi Mayindu</h1>
+    <p class="role">Data &amp; Marketing Analyst</p>
+    <p class="intro">I turn messy data into clear decisions. With a First-Class Honours degree in Digital Marketing Technologies from TU Dublin and hands-on analyst experience at Dublin City FM and Nexvara Digital, I use SQL, Power BI, Tableau and GA4 to find out who customers are, what drives them, and where the business should focus next.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View my projects</a>
+      <a class="btn" href="https://github.com/MerdiMayindu" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/merdi-mayindu/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:merdimayindu@gmail.com">Email me</a>
+    </div>
+    <div class="skills">
+      <span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span>
+      <span class="chip">Excel</span><span class="chip">GA4</span><span class="chip">Kantar</span>
+      <span class="chip">A/B testing</span><span class="chip">Customer segmentation</span>
+      <span class="chip">KPI reporting</span><span class="chip">Campaign analysis</span>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Featured projects</h2>
+      <p>Five end-to-end projects, each with a real business question, data cleaning and analysis in SQL, a Power BI dashboard and clear recommendations. The full SQL and write-up for every project is on GitHub.</p>
+    </div>
+
+    <div class="projects">
+
+      <article class="project">
+        <div class="shot"><img src="images/project-marketing-campaigns.jpg" alt="Marketing campaign analysis dashboard showing response rates by previous campaigns, children, income and recency" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Marketing analytics</div>
+          <h3>Marketing Campaign Performance</h3>
+          <p>Analysed 2,240 customers across six campaigns to find who responds to marketing and where budget should go. Cleaned text-formatted income, impossible birth years and invalid category values.</p>
+          <div class="finding"><strong>Key finding:</strong> customers who had accepted an earlier campaign and had no children responded at <b>50%</b>, over 3x the average. They were 10% of customers but produced 34% of all responses.</div>
+          <div class="tools"><span>SQL</span><span>Power BI</span><span>Segmentation</span></div>
+          <div class="links"><a class="btn" href="https://github.com/MerdiMayindu/marketing-campaign-analysis" target="_blank" rel="noopener">View on GitHub →</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shot"><img src="images/project-facebook-ads.jpg" alt="Facebook ads dashboard showing cost per purchase by age and gender, campaign and interest group" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Paid social</div>
+          <h3>Facebook Ads Performance</h3>
+          <p>Analysed 1,143 Facebook ads to find which audiences turn spend into purchases most cheaply. Calculated CTR, CPC and cost per purchase by campaign, age, gender and interest.</p>
+          <div class="finding"><strong>Key finding:</strong> the budget was going to the wrong audience. 30–34 year olds got 26% of spend but delivered <b>44% of purchases</b>, and a quarter of the budget went on ads that produced no purchases at all.</div>
+          <div class="tools"><span>SQL</span><span>Power BI</span><span>CPA / CTR</span></div>
+          <div class="links"><a class="btn" href="https://github.com/MerdiMayindu/facebook-ads-analysis" target="_blank" rel="noopener">View on GitHub →</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shot"><img src="images/project-website-segmentation.jpg" alt="Website visitor segmentation dashboard" loading="lazy" onerror="this.outerHTML='<div class=&quot;missing&quot;>Dashboard image coming soon</div>'"></div>
+        <div class="body">
+          <div class="tag">Web analytics</div>
+          <h3>Website Visitor Segmentation</h3>
+          <p>Segmented 12,330 e-commerce website sessions by behaviour using Google Analytics metrics (bounce rate, exit rate, page value) to find what separates buyers from browsers.</p>
+          <div class="finding"><strong>Key finding:</strong> High Intent visitors were just 22% of sessions but made <b>80% of purchases</b>. New visitors converted at almost double the rate of returning ones.</div>
+          <div class="tools"><span>SQL</span><span>Power BI</span><span>GA metrics</span><span>Conversion</span></div>
+          <div class="links"><a class="btn" href="https://github.com/MerdiMayindu/website-visitor-segmentation" target="_blank" rel="noopener">View on GitHub →</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shot"><img src="images/project-product-analytics.jpg" alt="Product analytics dashboard showing retention by version, player funnel and engagement" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Product analytics · A/B test</div>
+          <h3>Player Engagement, Retention &amp; A/B Test</h3>
+          <p>Analysed 90,189 players of the mobile game Cookie Cats: engagement, the drop-off funnel, retention, and an A/B test of moving a progress gate from level 30 to level 40.</p>
+          <div class="finding"><strong>Key finding:</strong> moving the gate lowered 7-day retention from 19.0% to 18.2%, a <b>statistically significant</b> drop (p = 0.002). Recommendation: keep the gate at level 30.</div>
+          <div class="tools"><span>SQL</span><span>Power BI</span><span>A/B testing</span><span>Retention</span></div>
+          <div class="links"><a class="btn" href="https://github.com/MerdiMayindu/product-analytics-ab-test" target="_blank" rel="noopener">View on GitHub →</a></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shot"><img src="images/project-telco-churn.jpg" alt="Telco customer churn dashboard showing churn by contract, payment method, tenure and internet service" loading="lazy"></div>
+        <div class="body">
+          <div class="tag">Customer analytics</div>
+          <h3>Telco Customer Churn</h3>
+          <p>Analysed 7,043 telecom customers to find who leaves, why, and what it costs, then turned the findings into retention recommendations.</p>
+          <div class="finding"><strong>Key finding:</strong> month-to-month, fibre and electronic-check customers churn at <b>60%</b>. They are under 19% of customers but account for 42% of all churners.</div>
+          <div class="tools"><span>SQL</span><span>Power BI</span><span>Churn</span></div>
+          <div class="links"><a class="btn" href="https://github.com/MerdiMayindu/telco-churn-analysis" target="_blank" rel="noopener">View on GitHub →</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Marketing work at Dublin City FM</h2>
+      <p>Real-world work from my time as Data Marketing Analyst at Ireland's largest community radio station.</p>
+    </div>
+
+    <div class="exp-card">
+      <h3>Data Marketing Analyst</h3>
+      <div class="exp-meta">Dublin City FM · January 2025 – March 2026</div>
+      <p style="margin:0;color:#3a424d">Built KPI reports and dashboards in Power BI and GA4 for senior management and the commercial team, analysed audience and sales performance, and worked on the station's digital presence across the website and social media.</p>
+      <div class="stats">
+        <div class="stat"><b>+15%</b><span>increase in online engagement from data-led recommendations</span></div>
+        <div class="stat"><b>112K</b><span>TikTok video views in 28 days</span></div>
+        <div class="stat"><b>54.5K</b><span>views on a single TikTok I created</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Website revamp</h3>
+    <p class="sub-p">Part of the team that rebuilt the station's website: a modern homepage built around what's on air now, clearer navigation, and a dedicated advertising section aimed at potential sponsors.</p>
+    <div class="compare">
+      <figure><img src="images/dcfm-homepage-old.jpg" alt="Old Dublin City FM homepage" loading="lazy"><figcaption><span class="label before">Before</span><b>Homepage.</b> Dated layout with limited navigation.</figcaption></figure>
+      <figure><img src="images/dcfm-homepage-new.jpg" alt="New Dublin City FM homepage" loading="lazy"><figcaption><span class="label after">After</span><b>Homepage.</b> Bold now-on-air hero, social links and clear calls to listen live.</figcaption></figure>
+    </div>
+    <div class="compare">
+      <figure><img src="images/dcfm-advertising-old.jpg" alt="Old Dublin City FM advertising page" loading="lazy"><figcaption><span class="label before">Before</span><b>Advertising page.</b> Text-heavy, with the key audience figures buried in paragraphs.</figcaption></figure>
+      <figure><img src="images/dcfm-advertising-new.jpg" alt="New Dublin City FM advertising page with audience statistics" loading="lazy"><figcaption><span class="label after">After</span><b>Advertising page.</b> Audience data turned into scannable stats: reach, demographics, listener location and market share.</figcaption></figure>
+    </div>
+
+    <h3 class="sub">Audience insights for advertisers</h3>
+    <p class="sub-p">Turned audience research into a one-page infographic for the sales team to share with advertisers, covering reach, demographics, listener location, listening habits and favourite genres.</p>
+    <figure style="max-width:760px"><img src="images/dcfm-advertiser-stats.jpg" alt="Dublin City FM advertising statistics infographic" loading="lazy"><figcaption><b>Advertising statistics infographic.</b> Built from Kantar audience research.</figcaption></figure>
+
+    <h3 class="sub">Social media growth on TikTok</h3>
+    <p class="sub-p">Created short-form video content for the station's TikTok and brought it onto the new website, tracking performance through TikTok analytics.</p>
+    <div class="trio">
+      <figure><img src="images/dcfm-tiktok-section.jpg" alt="TikTok section on the new Dublin City FM website" loading="lazy"><figcaption><b>TikTok feed on the new website,</b> alongside the sponsors section.</figcaption></figure>
+      <figure><img src="images/dcfm-tiktok-analytics.jpg" alt="TikTok Studio analytics showing 112K video views" loading="lazy"><figcaption><b>TikTok analytics:</b> 112K video views, 3K likes and 664 shares in 28 days.</figcaption></figure>
+      <figure><img src="images/dcfm-tiktok-viral.jpg" alt="Viral TikTok video about favourite Irish slang" loading="lazy"><figcaption><b>My viral video:</b> "Favourite Irish slang", 54.5K views.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="earlier">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Earlier dashboard work</h2>
+      <p>Dashboards built in Tableau, Power BI and Excel across retail, hospitality, healthcare and consulting data. Click any image to enlarge.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="images/earlier-superstore.jpg" alt="Excel superstore sales dashboard" loading="lazy"><figcaption><b>Superstore sales, 2011–2015 (Excel).</b> Interactive dashboard tracking €12.6m in sales and €1.47m profit by year, market, region, category, segment and shipping mode.</figcaption></figure>
+      <figure><img src="images/earlier-department-store.jpg" alt="Tableau department store dashboard" loading="lazy"><figcaption><b>Department store performance (Tableau).</b> Sales by category, salesperson and country, and how each advertising channel relates to customer review scores.</figcaption></figure>
+      <figure><img src="images/earlier-hotel.jpg" alt="Tableau hotel company dashboard" loading="lazy"><figcaption><b>Hotel company performance (Tableau).</b> Cost, discount and profit by customer group, booking priority, global market, hotel package and room type.</figcaption></figure>
+      <figure><img src="images/earlier-consultancy.jpg" alt="Tableau consultancy company dashboard" loading="lazy"><figcaption><b>Consultancy company analysis (Tableau).</b> Revenue by consultation type and year, project performance by consultant, and revenue by European country.</figcaption></figure>
+      <figure><img src="images/earlier-marketing-agency.jpg" alt="Power BI marketing agency dashboard" loading="lazy"><figcaption><b>Marketing agency analysis (Power BI).</b> Reward points by marketing campaign and review score, customer types, and order cost by product category.</figcaption></figure>
+      <figure><img src="images/earlier-sales-country.jpg" alt="Power BI sales analysis by country dashboard" loading="lazy"><figcaption><b>Sales by country, month and region (Power BI).</b> Interactive filters by country and category, monthly budget trend and a sales map.</figcaption></figure>
+      <figure><img src="images/earlier-hospital.jpg" alt="Tableau hospital dashboard" loading="lazy"><figcaption><b>Hospital operations analysis (Tableau).</b> Admissions, treatment charges by insurance type and department, and charges over time.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p>I'm looking for data, marketing analytics and insights roles in Dublin. I'd be happy to talk through any of my projects.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:merdimayindu@gmail.com">merdimayindu@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/merdi-mayindu/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/MerdiMayindu" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Merdi Mayindu</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><img alt=""></div>
+<script>
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  document.querySelectorAll('.shot img, figure img').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
+    });
+  });
+  lb.addEventListener('click', () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.click(); });
+</script>
+</body>
+</html>
